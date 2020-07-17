@@ -26,12 +26,20 @@ for (i = 0; i < second; i++) {
     seconddiv.innerHTML = "";
     document.getElementById('seconds').appendChild(seconddiv);
 }
+
+function sifirekleme(sayi) {
+    if (sayi < 10) {
+        return "0" + sayi;
+    } else {
+        return sayi;
+    }
+}
 let interval = setInterval(() => {
     let date = new Date();
     let saat = date.getHours();
     let dakika = date.getMinutes();
     let saniye = date.getSeconds();
-    document.getElementById('time').innerHTML = saat + ":" + dakika + ":" + saniye;
+    document.getElementById('time').innerHTML = sifirekleme(saat) + ":" + sifirekleme(dakika) + ":" + sifirekleme(saniye);
 
     for (i = 0; i < 24; i++) {
         let h = document.getElementById('hour' + i);
