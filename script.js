@@ -33,4 +33,28 @@ let interval = setInterval(() => {
     let saniye = date.getSeconds();
     document.getElementById('time').innerHTML = saat + ":" + dakika + ":" + saniye;
 
+    for (i = 0; i < 24; i++) {
+        let h = document.getElementById('hour' + i);
+        if (i < saat) {
+            h.style.backgroundColor = "#5AC8FA";
+        } else {
+            h.style.backgroundColor = "#D9D9D9";
+        }
+    }
+    for (i = 0; i < 59; i++) {
+        let m = document.getElementById('minute' + i);
+        if (i < dakika) {
+            m.style.backgroundColor = "#5AC8FA"
+        } else {
+            m.style.backgroundColor = "#D9D9D9"
+        }
+    }
+    for (i = 0; i < 59; i++) {
+        let s = document.getElementById('second' + i);
+        if (i < saniye) {
+            s.style.backgroundColor = "#5AC8FA"
+        } else {
+            s.style.backgroundColor = "#D9D9D9"
+        }
+    }
 }, 1000);

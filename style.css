@@ -1,3 +1,8 @@
+body {
+    font-family: 'Roboto Mono';
+    font-style: bold;
+}
+
 .hours {
     display: flex;
 }
