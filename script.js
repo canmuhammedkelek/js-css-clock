@@ -35,24 +35,56 @@ function sifirekleme(sayi) {
     }
 }
 
+function saatmaxlimit() {
+    let limit = document.getElementById('sonuc0').value;
+    if (limit <= "24") {
+        limit = 24;
+    } else {
+        document.getElementById('sonuc0').value = "24";
+    }
+}
+
+function dkmaxlimit() {
+    let limit = document.getElementById('sonuc1').value;
+    if (limit <= "60") {
+        limit = 60;
+    } else {
+        document.getElementById('sonuc1').value = "60";
+    }
+}
+
+
+
 function arttir() {
     let sonuc = document.getElementById('sonuc0');
-    sonuc.value = Number(sonuc.value) + 1;
+
+    if (sonuc.value <= 24) {
+        sonuc.value = Number(sonuc.value) + 1;
+    }
 }
 
 function azalt() {
     let sonuc = document.getElementById('sonuc0');
-    sonuc.value = Number(sonuc.value) - 1;
+    if (sonuc.value > 0) {
+        sonuc.value = Number(sonuc.value) - 1;
+    }
+
 }
 
 function dkarttir() {
     let sonuc = document.getElementById('sonuc1');
-    sonuc.value = Number(sonuc.value) + 1;
+    if (sonuc.value < 60) {
+        sonuc.value = Number(sonuc.value) + 1;
+    }
+
 }
 
 function dkazalt() {
     let sonuc = document.getElementById('sonuc1');
-    sonuc.value = Number(sonuc.value) - 1;
+    if (sonuc.value > 0) {
+        sonuc.value = Number(sonuc.value) - 1;
+    }
+
 }
 let interval = setInterval(() => {
     let date = new Date();
@@ -60,6 +92,8 @@ let interval = setInterval(() => {
     let dakika = date.getMinutes();
     let saniye = date.getSeconds();
     document.getElementById('time').innerHTML = sifirekleme(saat) + ":" + sifirekleme(dakika) + ":" + sifirekleme(saniye);
+    //document.getElementById('sonuc0').value = sifirekleme(saat);
+    //document.getElementById('sonuc1').value = sifirekleme(dakika);
 
     for (i = 0; i < 24; i++) {
         let h = document.getElementById('hour' + i);

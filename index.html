@@ -19,10 +19,10 @@
         <span style="font-size: 24px;" id="time"></span>
         <div class="button">
             <div class="button1" style="">
-                <button onclick="azalt()">-</button><input type="text" id="sonuc0" value="0" size="1"><button onclick="arttir()">+</button>
+                <button onclick="azalt()">-</button><input type="text" onkeyup="saatmaxlimit()" onkeypress='return event.keyCode >= 48 && event.keyCode <= 57' id="sonuc0" value="00" size="1"><button onclick="arttir()">+</button>
             </div>
             <div class="button2">
-                <button onclick="dkazalt()">-</button><input type="text" id="sonuc1" value="0" size="1"><button onclick="dkarttir()">+</button>
+                <button onclick="dkazalt()">-</button><input type="text" onkeyup="dkmaxlimit()" onkeypress='return event.keyCode >= 48 && event.keyCode <= 57' id="sonuc1" value="00" size="1"><button onclick="dkarttir()">+</button>
             </div>
         </div>
     </div>
