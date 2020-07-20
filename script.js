@@ -34,6 +34,26 @@ function sifirekleme(sayi) {
         return sayi;
     }
 }
+
+function arttir() {
+    let sonuc = document.getElementById('sonuc0');
+    sonuc.value = Number(sonuc.value) + 1;
+}
+
+function azalt() {
+    let sonuc = document.getElementById('sonuc0');
+    sonuc.value = Number(sonuc.value) - 1;
+}
+
+function dkarttir() {
+    let sonuc = document.getElementById('sonuc1');
+    sonuc.value = Number(sonuc.value) + 1;
+}
+
+function dkazalt() {
+    let sonuc = document.getElementById('sonuc1');
+    sonuc.value = Number(sonuc.value) - 1;
+}
 let interval = setInterval(() => {
     let date = new Date();
     let saat = date.getHours();
@@ -44,25 +64,25 @@ let interval = setInterval(() => {
     for (i = 0; i < 24; i++) {
         let h = document.getElementById('hour' + i);
         if (i < saat) {
-            h.style.backgroundColor = "#5AC8FA";
+            h.className = "hourstyle blue";
         } else {
-            h.style.backgroundColor = "#D9D9D9";
+            h.className = "hourstyle gray";
         }
     }
     for (i = 0; i < 59; i++) {
         let m = document.getElementById('minute' + i);
         if (i < dakika) {
-            m.style.backgroundColor = "#5AC8FA"
+            m.className = "minutestyle blue";
         } else {
-            m.style.backgroundColor = "#D9D9D9"
+            m.className = "minutestyle gray";
         }
     }
     for (i = 0; i < 59; i++) {
         let s = document.getElementById('second' + i);
         if (i < saniye) {
-            s.style.backgroundColor = "#5AC8FA"
+            s.className = "secondstyle blue";
         } else {
-            s.style.backgroundColor = "#D9D9D9"
+            s.className = "secondstyle gray";
         }
     }
 }, 1000);
