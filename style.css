@@ -142,42 +142,30 @@ input {
 
 @media only screen and (max-height: 660px) {
     .hourstyle {
-        height: 180px;
+        height: 80%;
     }
     .minutestyle {
-        height: 180px;
+        height: 80%;
     }
     .secondstyle {
-        height: 100px;
+        height: 80%;
     }
 }
 
 @media only screen and (max-height: 560px) {
     .hourstyle {
-        height: 140px;
+        height: 60%;
     }
     .minutestyle {
-        height: 140px;
+        height: 60%;
     }
 }
 
 @media only screen and (max-height:460px) {
     .hourstyle {
-        height: 100px;
+        height: 40%;
     }
     .minutestyle {
-        height: 100px;
-    }
-}
-
-@media only screen and (max-height:360px) {
-    .hourstyle {
-        height: 60px;
-    }
-    .minutestyle {
-        height: 60px;
-    }
-    .secondstyle {
-        height: 60px;
+        height: 40%;
     }
 }
