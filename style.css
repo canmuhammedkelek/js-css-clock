@@ -140,17 +140,44 @@ input {
     }
 }
 
-@media only screen and (max-height: 699px) {
+@media only screen and (max-height: 660px) {
     .hourstyle {
-        display: inline;
+        height: 180px;
     }
     .minutestyle {
-        height: auto;
+        height: 180px;
     }
     .secondstyle {
-        height: auto;
+        height: 100px;
     }
-    .bottom {
-        height: auto;
+}
+
+@media only screen and (max-height: 560px) {
+    .hourstyle {
+        height: 140px;
+    }
+    .minutestyle {
+        height: 140px;
+    }
+}
+
+@media only screen and (max-height:460px) {
+    .hourstyle {
+        height: 100px;
+    }
+    .minutestyle {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-height:360px) {
+    .hourstyle {
+        height: 60px;
+    }
+    .minutestyle {
+        height: 60px;
+    }
+    .secondstyle {
+        height: 60px;
     }
 }
